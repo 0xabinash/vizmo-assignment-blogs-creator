@@ -4,11 +4,21 @@ import './index.css'
 import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements } from 'react-router-dom'
 import { CreateBlog, Layout, BlogsList, BlogView } from './components/exporter.js'
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path='/' element={<Layout />}>
+//       <Route path='' element={<BlogsList />} />
+//       <Route path="/create-blog" element={<CreateBlog />} />
+//       <Route path="/blog-view/:id" element={<BlogView />} />
+//     </Route>
+//   )
+// )
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='' element={<BlogsList />} />
-      <Route path="/create-blog" element={<CreateBlog />} />
+      <Route path='' element={<CreateBlog />} />
+      <Route path="/blogs" element={<BlogsList />} />
       <Route path="/blog-view/:id" element={<BlogView />} />
     </Route>
   )

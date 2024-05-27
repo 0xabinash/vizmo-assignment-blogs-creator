@@ -15,7 +15,7 @@ const Layout = () => {
         localStorage.setItem("posts", JSON.stringify(posts))
       }
     }
-  },[posts?.length]);
+  },[]);
 
   useEffect(()=>{
     if (navHeightRef) {

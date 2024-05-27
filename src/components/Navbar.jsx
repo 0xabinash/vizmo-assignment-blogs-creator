@@ -3,8 +3,8 @@ import { DarkThemeSwitcher } from './exporter';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const navArr = [
-  {name: "Create", to: "/create-blog"},
-  {name: "Blogs", to: "/"}
+  {name: "Create", to: "/"},
+  {name: "Blogs", to: "/blogs"}
 ]
 
 const Navbar = forwardRef(({setIsDarkActive}, ref) => {
