@@ -1,5 +1,4 @@
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useNavigate, useOutletContext } from "react-router-dom";
 
 const BlogCard = ({data}) => {
@@ -25,10 +24,9 @@ const BlogCard = ({data}) => {
       </div>
       <div className="flex items-center justify-between">
         <div className="flex gap-2 items-center w-fit">
-          <Avatar className=" ">
-            <AvatarImage src={data.avatar} />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
+          <div className="w-[40px] h-[40px] rounded-full overflow-hidden ring">
+            <img src={data.avatar} alt={data.creator} />
+          </div>
           <p className="text-sm text-muted-foreground font-semibold ">{data.creator}</p>
         </div>
         <div className="flex space-x-1">

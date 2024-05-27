@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements } from 'react-router-dom'
 import { CreateBlog, Layout, BlogsList, BlogView } from './components/exporter.js'
-import { Toaster } from './components/ui/toaster'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +17,5 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <RouterProvider router={router} />
-      <Toaster />
   </React.StrictMode>,
 )

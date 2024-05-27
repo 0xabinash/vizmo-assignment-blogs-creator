@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const BlogView = () => {
   const { id } = useParams();
@@ -21,10 +20,9 @@ const BlogView = () => {
       <h1 className="text-4xl underline font-semibold">{postToShow.heading}</h1>
       <div className="flex w-full justify-between  items-center">
         <div className=" flex flex-col gap-2 items-start w-fit ">
-          <Avatar className=" ">
-            <AvatarImage src={postToShow?.avatar} />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
+          <div className="w-[40px] h-[40px] rounded-full overflow-hidden ring">
+            <img src={postToShow?.avatar} alt={postToShow?.creator} />
+          </div>
           <p className="text-md text-foreground font-semibold ">
             By: {postToShow.creator}
           </p>

@@ -3,10 +3,8 @@ import { Editor } from './exporter';
 import Compressor from 'compressorjs';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
-import { useToast } from './ui/use-toast';
 
 const CreateBlog = () => {
-  const { toast } = useToast()
   const navigate = useNavigate();
   const [blogData, setBlogData] = useState({
     heading: "",
@@ -33,12 +31,7 @@ const CreateBlog = () => {
       localStorage.setItem("posts", JSON.stringify(posts));
     }
 
-    toast({
-      className: "bg-green-600 text-2xl font-semibold",
-      title: "Success",
-      description: "Post Created successfully",
-    })
-
+    alert("Blog creation success.")
     setTimeout(()=>{
       navigate("/")
     },2000)

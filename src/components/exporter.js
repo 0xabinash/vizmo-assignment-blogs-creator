@@ -7,5 +7,3 @@ export { default as Footer } from "./Footer";
 export { default as BlogsList } from "./BlogsList";
 export { default as BlogView } from "./BlogView";
 export { default as BlogCard } from "./BlogCard";
-
-
